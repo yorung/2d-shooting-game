@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
         while (true)
         {
             spaceship.Shot(spaceship.transform);
+            GetComponent<AudioSource>().Play();
             yield return new WaitForSeconds(spaceship.shotDelay);
         }
     }
