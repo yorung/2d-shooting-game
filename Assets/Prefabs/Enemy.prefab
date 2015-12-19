@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 464388}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShotPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 493734}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShotPosition (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,8 @@ GameObject:
   - 50: {fileID: 5055172}
   - 114: {fileID: 11419580}
   - 114: {fileID: 11443384}
-  m_Layer: 0
+  - 60: {fileID: 6066696}
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +59,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 438618}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShotPosition (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,6 +133,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &6066696
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159136}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: .140000001, y: .379999995}
+      - {x: -.280000001, y: .379999995}
+      - {x: -.280000001, y: -.300000012}
+      - {x: .159999996, y: -.300000012}
+      - {x: .280000001, y: -.180000007}
+      - {x: .280000001, y: .340000004}
+      - {x: .219999999, y: .360000014}
 --- !u!95 &9524112
 Animator:
   serializedVersion: 3
@@ -164,6 +185,7 @@ MonoBehaviour:
   shotDelay: .699999988
   bullet: {fileID: 144776, guid: 016a5d7ccfb7e99428cead0752b275bd, type: 2}
   canShot: 1
+  explosion: {fileID: 176198, guid: 2de710e3423b8064fa98ba82e5e64fa8, type: 2}
 --- !u!114 &11443384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,6 +237,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: shotDelay
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 176198, guid: 2de710e3423b8064fa98ba82e5e64fa8, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

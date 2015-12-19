@@ -8,6 +8,7 @@ public class Spaceship : MonoBehaviour
     public float shotDelay;
     public GameObject bullet;
     public bool canShot;
+    public GameObject explosion;
 
     public void Shot(Transform origin)
     {
@@ -17,5 +18,10 @@ public class Spaceship : MonoBehaviour
     public void Move(Vector2 direction)
     {
         GetComponent<Rigidbody2D>().velocity = direction * speed;
+    }
+
+    public void Explosion()
+    {
+        Instantiate(explosion, transform.position, transform.rotation);
     }
 }

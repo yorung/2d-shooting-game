@@ -9,7 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 496356}
   - 212: {fileID: 21279472}
-  m_Layer: 0
+  - 60: {fileID: 6042818}
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +26,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 482988}
   - 212: {fileID: 21267276}
-  m_Layer: 0
+  - 60: {fileID: 6096452}
+  m_Layer: 10
   m_Name: Bullet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +44,7 @@ GameObject:
   - 4: {fileID: 412918}
   - 50: {fileID: 5088326}
   - 114: {fileID: 11483460}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,6 +105,48 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &6042818
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120954}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -.0299999993, y: .0799999982}
+      - {x: -.0500000007, y: .0500000007}
+      - {x: -.0500000007, y: -.0299999993}
+      - {x: -.0299999993, y: -.0799999982}
+      - {x: .0299999993, y: -.0799999982}
+      - {x: .0500000007, y: -.0199999996}
+      - {x: .0500000007, y: .0599999987}
+      - {x: .0299999993, y: .0799999982}
+--- !u!60 &6096452
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156136}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -.0299999993, y: .0799999982}
+      - {x: -.0500000007, y: .0500000007}
+      - {x: -.0500000007, y: -.0299999993}
+      - {x: -.0299999993, y: -.0799999982}
+      - {x: .0299999993, y: -.0799999982}
+      - {x: .0500000007, y: -.0199999996}
+      - {x: .0500000007, y: .0599999987}
+      - {x: .0299999993, y: .0799999982}
 --- !u!114 &11483460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +225,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_SortingLayerID
       value: 524162749
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

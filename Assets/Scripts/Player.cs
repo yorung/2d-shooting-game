@@ -20,4 +20,20 @@ public class Player : MonoBehaviour {
         Vector2 direction = new Vector2(x, y).normalized;
         spaceship.Move(direction);
     }
+
+    void OnTriggerEnter2D(Collider2D c)
+    {
+        string layerName = LayerMask.LayerToName(c.gameObject.layer);
+
+        if (layerName == "Bullet (Enemy)")
+        {
+            Destroy(c.gameObject);
+        }
+
+        if (layerName == "Bullet (Enemy)" || layerName == "Enemy")
+        {
+            spaceship.Explosion();
+            Destroy(gameObject);
+        }
+    }
 }
