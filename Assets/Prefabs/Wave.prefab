@@ -562,10 +562,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a13bfaef659fc46aacc81e33ffbc75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .100000001
-  shotDelay: 2
+  speed: .5
+  shotDelay: 4
   bullet: {fileID: 144776, guid: 016a5d7ccfb7e99428cead0752b275bd, type: 2}
-  canShot: 1
+  canShot: 0
   explosion: {fileID: 176198, guid: 2de710e3423b8064fa98ba82e5e64fa8, type: 2}
 --- !u!114 &11457322
 MonoBehaviour:
@@ -589,8 +589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a13bfaef659fc46aacc81e33ffbc75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .100000001
-  shotDelay: .699999988
+  speed: .5
+  shotDelay: 8
   bullet: {fileID: 144776, guid: 016a5d7ccfb7e99428cead0752b275bd, type: 2}
   canShot: 0
   explosion: {fileID: 176198, guid: 2de710e3423b8064fa98ba82e5e64fa8, type: 2}
@@ -605,10 +605,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a13bfaef659fc46aacc81e33ffbc75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .100000001
-  shotDelay: .699999988
+  speed: .5
+  shotDelay: 5
   bullet: {fileID: 144776, guid: 016a5d7ccfb7e99428cead0752b275bd, type: 2}
-  canShot: 0
+  canShot: 1
   explosion: {fileID: 176198, guid: 2de710e3423b8064fa98ba82e5e64fa8, type: 2}
 --- !u!114 &11481786
 MonoBehaviour:
@@ -709,6 +709,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.x
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: canShot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shotDelay
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: .5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

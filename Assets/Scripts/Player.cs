@@ -23,13 +23,46 @@ public class Player : MonoBehaviour {
         pos.y = Mathf.Clamp(pos.y, min.y, max.y);
         transform.position = pos;
     }
+    /*
+        void Touch()
+        {
+            if (Input.touchCount > 0)
+            {
+                Touch t = Input.GetTouch(0);
+                //            Camera.main.ScreenToWorldPoint(t.position);
+                Ray r = Camera.main.ScreenPointToRay(t.position);
+                Vector3 v = r.GetPoint(0);
+                float deltaX = v.x - transform.position.x;
+                float deltaY = v.y - transform.position.y;
+                Vector2 direction = new Vector2(deltaX, deltaY).normalized;
+                Move(direction);
+            }
+        }
+        void Keyboard()
+        {
+            float x = Input.GetAxisRaw("Horizontal");
+            float y = Input.GetAxisRaw("Vertical");
+            Vector2 direction = new Vector2(x, y).normalized;
+            Move(direction);
+        }
+    */
+    void Mouse()
+    {
+        Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Vector3 v = r.GetPoint(0);
+        float deltaX = v.x - transform.position.x;
+        float deltaY = v.y - transform.position.y;
+        Vector2 direction = new Vector2(deltaX, deltaY);
+        if (direction.sqrMagnitude > 1)
+        {
+            direction = direction.normalized;
+        }
+        Move(direction);
+    }
+
     void Update()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-        Vector2 direction = new Vector2(x, y).normalized;
-//        spaceship.Move(direction);
-        Move(direction);
+        Mouse();
     }
 
     void OnTriggerEnter2D(Collider2D c)
